@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PHINMA COC Student Violation Monitoring</title>
+<link rel="stylesheet " href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>PHINMA COC</h2>
+    <div>
+        <a href="#home" class="active">Home</a>
+        <a href="#add" class="active">Add</a>
+        <a href="#records" class="active">Record</a>
+        <a href="#about" class="active">About</a>
+        <a href="#contact" class="active">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+   
+        <div class="logo"></div>
+       
+        <div class="home-text">
+            <h2>Student Violation Monitoring System</h2>
+            <p>Welcome! This system helps monitor and record student violations in PHINMA COC.</p>
+        </div>
+   
+</section>
+
+<!-- RECORDS -->
+<section id="add">
+    <div class="card">
+        <h2>Add Violation Record</h2>
+
+        <input type="text" placeholder="Student Name">
+        <input type="text" placeholder="Student ID">
+        <input type="text" placeholder="Department">
+        <input type="text" placeholder="Section">
+        <input type="text" placeholder="Year">
+
+        <input type="text" placeholder="Violation">
+        <input type="text" placeholder="Description">
+        <input type="date">
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Reported By">
+
+
+        <input type="text" placeholder="Action">
+
+        <!-- STATUS INPUT -->
+        <select>
+            <option disabled selected>Status</option>
+            <option>Pending</option>
+            <option>Solved</option>
+            <option>Archived</option>
+        </select>
+
+        <button>Add Record</button>
+        <p style="color: gray; font-size: 12px;">(Static only – no functionality yet)</p>
+    </div>
+</section>
+<section id="records">   <!-- RECORD TABLE -->
+    <div class="card">
+        <h2>Violation Records</h2>
+        <div class="table-container">
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Dept</th>
+                <th>Section</th>
+                <th>Year</th>
+                <th>Violation</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Reported By</th>
+                <th>Action</th>
+                <th>Status</th>
+            </tr>
+
+            <!-- Existing Records -->
+            <tr>
+                <td>1</td>
+                <td>Juan Dela Cruz</td>
+                <td>2023-001</td>
+                <td>IT</td>
+                <td>A1</td>
+                <td>1st</td>
+                <td>Late</td>
+                <td>Arrived late</td>
+                <td>2026-03-20</td>
+                <td>Room 101</td>
+                <td>Mr. Santos</td>
+                <td>Dean</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Maria Santos</td>
+                <td>2023-002</td>
+                <td>BSBA</td>
+                <td>B2</td>
+                <td>2nd</td>
+                <td>Uniform</td>
+                <td>Improper uniform</td>
+                <td>2026-03-18</td>
+                <td>Hallway</td>
+                <td>Ms. Cruz</td>
+                <td>guidance</td>
+                <td>Mark as solve</td>
+            </tr>
+
+            <!-- Additional Records -->
+            <tr>
+                <td>3</td>
+                <td>Pedro Garcia</td>
+                <td>2023-003</td>
+                <td>HRM</td>
+                <td>C3</td>
+                <td>3rd</td>
+                <td>Late</td>
+                <td>Missed class</td>
+                <td>2026-03-22</td>
+                <td>Room 102</td>
+                <td>Ms. Mendoza</td>
+                <td>Dean</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Alice Reyes</td>
+                <td>2023-004</td>
+                <td>IT</td>
+                <td>A2</td>
+                <td>1st</td>
+                <td>Cheating</td>
+                <td>Found with cheat sheet</td>
+                <td>2026-03-21</td>
+                <td>Room 105</td>
+                <td>Mr. Santos</td>
+                <td>Dean</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Mark Cruz</td>
+                <td>2023-005</td>
+                <td>BSBA</td>
+                <td>B3</td>
+                <td>2nd</td>
+                <td>Vandalism</td>
+                <td>Damaged classroom door</td>
+                <td>2026-03-19</td>
+                <td>Hallway</td>
+                <td>Ms. Cruz</td>
+                <td>disciplinary committee</td>
+                <td>Pending</td>
+
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>John Smith</td>
+                <td>2023-006</td>
+                <td>CS</td>
+                <td>D1</td>
+                <td>4th</td>
+                <td>Late</td>
+                <td>Arrived after class started</td>
+                <td>2026-03-20</td>
+                <td>Room 106</td>
+                <td>Mr. Torres</td>
+                <td>Guidance</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Emma Johnson</td>
+                <td>2023-007</td>
+                <td>ENG</td>
+                <td>D2</td>
+                <td>1st</td>
+                <td>Late</td>
+                <td>Arrived late to exam</td>
+                <td>2026-03-21</td>
+                <td>Room 103</td>
+                <td>Mr. Ramos</td>
+                <td>Guidance</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Sarah Lee</td>
+                <td>2023-008</td>
+                <td>BSBA</td>
+                <td>B1</td>
+                <td>3rd</td>
+                <td>Uniform</td>
+                <td>Not wearing proper shoes</td>
+                <td>2026-03-22</td>
+                <td>Hallway</td>
+                <td>Ms. Cruz</td>
+                <td>Guidance</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Robert Brown</td>
+                <td>2023-009</td>
+                <td>CS</td>
+                <td>D3</td>
+                <td>2nd</td>
+                <td>Smoking</td>
+                <td>Smoking on campus</td>
+                <td>2026-03-18</td>
+                <td>Outside</td>
+                <td>Ms. Mendoza</td>
+                <td>Dean</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Linda White</td>
+                <td>2023-010</td>
+                <td>HRM</td>
+                <td>C1</td>
+                <td>4th</td>
+                <td>Late</td>
+                <td>Missed morning class</td>
+                <td>2026-03-17</td>
+                <td>Room 104</td>
+                <td>Mr. Santos</td>
+                <td>Guidance</td>
+                <td>Pending</td>
+            </tr>
+
+        </table>
+
+<!-- 👉 ADD HERE -->
+        <div class="table-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="solve-btn">Mark as Solved</button>
+            <button class="archive-btn">Archive</button>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="card">
+        <h2>About Us</h2>
+        <p>The PHINMA COC Student Violation Monitoring System <br> is a program designed to help authorized users efficiently<br> manage student violation records. It allows users to view,<br> add, edit, and  archive violations. With this system, authorized<br> staff or guidance personnel can reduce errors, maintain accurate<br> information, and keep the student violation records<br> organized and easily accessible.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="card">
+        <h2>Contact Us</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button>Send Message</button>
+        <p style="color: gray; font-size: 12px;">(Demo only – not functional)</p>
+    </div>
+</section>
+
+</body>
+</html>
