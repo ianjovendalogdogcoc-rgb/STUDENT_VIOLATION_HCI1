@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+/* NAVBAR CONTAINER */
+nav {
+    background: #025a24;
+    color: white;
+    display: flex;
+    justify-content: space-between;   /* logo left, links right */
+    align-items: center;              /* vertical centering */
+    padding: 15px 30px;
+    position: sticky;                 /* sticky top */
+    top: 0;
+    z-index: 1000;                    /* stays above content */
+    box-shadow: 0 2px 5px rgb(255, 254, 254); /* subtle shadow */
+}
+
+/* NAVBAR LOGO */
+nav h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* NAVBAR LINKS CONTAINER */
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+/* NAVBAR LINKS */
+nav div a {
+    color: white;
+    margin-left: 25px;                 /* space between links */
+    text-decoration: none;
+    font-weight: 600;                  /* slightly bolder */
+    padding: 8px 12px;                 /* clickable area */
+    border-radius: 5px;                /* rounded hover effect */
+    transition: all 0.3s ease;         /* smooth hover transition */
+}
+
+nav div a:hover {
+    background-color: #43a770;         /* subtle background on hover */
+    color: #fff;
+    transform: translateY(-2px);       /* slight lift */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* ACTIVE LINK STYLING */
+nav div a.active {
+    background-color: #ff9900;         /* accent color */
+    color: #003366;
+}
+/* SECTIONS */
+section {
+    padding: 40px;
+}
+
+.card {
+    position: relative; /* needed for overlay to work */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiTC8MivUiXofAvVBEQify80RoeCNWidOKg&s'); /* your image link */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(241, 238, 238); /* ensures text is visible */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(238, 235, 235, 0.1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 56, 8, 0.815); /* dark transparent overlay */
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.card * {
+    position: relative;
+    z-index: 1; /* text appears above overlay */
+}
+
+/* HOME */
+.home {
+    display: flex;
+    align-items: center;  /* vertically centers h2 next to logo */
+    gap: 20px;            /* space between logo and text */
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* keeps h2 and paragraph vertically centered */
+}
+
+.home-text h2 {
+    margin: 0;
+    font-size: 5em;
+    color: #f3f70b;
+}
+
+.home-text p {
+    margin: 5px 0 0 0;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.logo {
+    width: 265px;
+    height: 200px;
+    border-radius: 50%;                    /* makes it circular */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVOcgJ8tehxyavDkIcYGmUKFD6p5h6Sfokg&s.pjg'); /* your image link */
+    background-size: cover;                 /* image fills the circle */
+    background-position: center;            /* center image */
+    background-repeat: no-repeat;           /* no tiling */
+}
+
+#home {
+    background-image: url('https://coc.phinma.edu.ph/wp-content/uploads/2024/03/PHINMA-COC-MAIN.jpg'); /* Chrome link */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.home {
+    width: 13in;        /* controls the width */
+    min-height: 5in;   /* minimum height so content fits */
+    padding: 10px;       /* spacing inside the card */
+    overflow: hidden;    /* prevents content from spilling */
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.0); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+
+.card.home {
+    position: relative;
+    z-index: 2;
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 2;
+    border-radius: 10px;
+    border: 1px solid #50da5c;
+}
+
+button {
+    background: #006627;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+#add, #records {
+    scroll-margin-top: 100px;
+}
+
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px solid #50da5c;
+}
+
+
+/* TABLE */
+.table-container {
+    width: 100%;                  /* container fills card */
+    overflow-x: auto;             /* horizontal scroll if table too wide */
+}
+
+table {
+    width: 1200px;                /* fixed table width */
+    max-width: 100%;               /* prevents overflow on small screens */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    min-width: 100px;             /* prevents columns from shrinking too much */
+}
+
+th {
+    background: #020329;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;      /* smooth scrolling */
+    scroll-padding-top: 80px;     /* accounts for sticky navbar height */
+    scroll-snap-type: y mandatory; /* enable vertical snap */
+}
+
+section {
+    scroll-snap-align: center;
+    min-height: 60vh;
+    display: fixed center;
+    justify-content: center;
+    align-items: center;    /* each section centers in viewport */
+}
+
+.table-actions {
+    margin-top: 20px;
+    text-align: right; /* aligns buttons to the right under the table */
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* space between buttons */
+}
+
+.table-actions button {
+    padding: 10px 20px; /* bigger, comfortable clickable size */
+    font-size: 16px;     /* readable text */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.table-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Colors */
+.edit-btn {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.solve-btn {
+    background-color: #048645;
+    color: #fff;
+}
+
+.archive-btn {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+#about .card {
+    max-width: 1200px;
+    min-height: 400px;
+    margin: auto;
+    font-size: 25px;
+}
